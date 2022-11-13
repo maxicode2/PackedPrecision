@@ -6,7 +6,7 @@ let root = dirname(resolve(process.argv[2]))
 
 let f = fs.createReadStream(process.argv[2])
 
-let out = fs.createWriteStream(join("out", basename(process.argv[2])))
+let out = fs.createWriteStream(join("packed", basename(process.argv[2])))
 
 const searchTypes = {
     73: (f) => fs.readFileSync(join(root, f)),
